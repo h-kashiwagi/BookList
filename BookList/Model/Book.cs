@@ -8,11 +8,12 @@ namespace BookList.Model
 {
     public class Book
     {
-        [Key] //プライマリーキー（主キー）
+        [Key] //プライマリーキー（主キー）※実質、nullはNG
         public int Id { get; set; }
 
         [Required] //nullはNG
         public string Name { get; set; } //Bookの名前
         public string Author { get; set; } //Bookの著者
+
     }
 }
