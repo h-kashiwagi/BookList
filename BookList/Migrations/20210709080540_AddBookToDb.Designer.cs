@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookList.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210708065418_AddBookToDb")]
+    [Migration("20210709080540_AddBookToDb")]
     partial class AddBookToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
