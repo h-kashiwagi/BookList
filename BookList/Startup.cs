@@ -1,8 +1,8 @@
-using BookList.Model;
+using BookList.Model;  //追加
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore; //追加
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +26,9 @@ namespace BookList
         public void ConfigureServices(IServiceCollection services)
         {
             //設定の内部にEntityFrameworkCoreを取り込むための設定
+            //DefaultConnectionはjsonファイルに書いてあるDefaultConnectionから設定情報を取り出している
+            //UseSqlServerの戻り値はDbContextOptionsBuilderというクラスのインスタンスになる
+            //AppDbContextクラスのインスタンスを生成
             services.AddDbContext<AppDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddRazorPages();
         }

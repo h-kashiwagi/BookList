@@ -1,0 +1,68 @@
+﻿@page
+@model BookList.IndexModel
+@{
+    ViewData["Title"] = "index";  //ページのタイトルにつけられる
+}
+
+
+<br />
+<div class="container row p-0 m-0">
+    <!--それぞれはclassはSassで設定されている-->
+    <div class="col-9">
+        <h1><font class="text-dark">Shop List</font></h1>
+    </div>
+    
+    <div class="col-3">
+            <input type="button" value="新しい本を追加" />
+        <a class="btn btn-info form-control text-white">新しい本を追加</a> <!--Sassのclassのbtnでhtmlのinputタグで作るボタンが出現-->
+    </div>
+
+    
+
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @if(Model.Books.Count() > 0)
+            {
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                    <!--thは見出し、trは行、tdは要素--> <!--行（横）ができる-->
+                    <th>
+                        <label>Id</label>
+                    </th>
+                    <th>
+                        <!--タイトル（テーマ）を表示-->
+                        <label>名前</label>
+                    </th>
+                    <th>
+                        <label>筆者</label>
+                        @*<label asp-for="Books.FirstOrDefault().Author"></label>*@  <!--DBのカラム名を参照してるから変えられない？-->
+                    </th>
+
+                </tr>
+                @foreach (var item in Model.Books) @*IndexModelのpublic IEnumerable<Book> Booksプロパティ*@
+                {
+                <tr>
+                    <!--行（横）ができる-->
+                    <td>
+                        @Html.DisplayFor(m => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.Author)
+                    </td>
+                </tr>
+                }
+            </table>
+            }
+             else
+            {
+                <p>利用可能な本はありません</p>
+            }
+        </form>
+
+    </div>
+
+
+</div>
