@@ -14,6 +14,7 @@ namespace BookList.Model
         [Required] //nullはNG
         public string Name { get; set; } //Bookの名前
         public string Author { get; set; } //Bookの著者
+        public string ISBN { get; set; }
 
     }
 }

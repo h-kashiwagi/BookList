@@ -382,3 +382,4 @@ C:\Users\h-kashiwagi\Desktop\BookList\BookList\obj\Debug\netcoreapp3.1\BookList.
 C:\Users\h-kashiwagi\Desktop\BookList\BookList\obj\Debug\netcoreapp3.1\BookList.pdb
 C:\Users\h-kashiwagi\Desktop\BookList\BookList\obj\Debug\netcoreapp3.1\BookList.genruntimeconfig.cache
 C:\Users\h-kashiwagi\Desktop\BookList\BookList\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Index.cshtml.g.cs
+C:\Users\h-kashiwagi\Desktop\BookList\BookList\obj\Debug\netcoreapp3.1\Razor\Pages\BookList\Create.cshtml.g.cs
